@@ -27,6 +27,10 @@ CSS INDEX
 17. Preloader-css
 -----------------------------------------------------------------------------------*/
 
+p {
+    text-align: justify;
+}
+
 /*-----------------
 1. Google font
 ------------------*/
@@ -357,8 +361,8 @@ input:-webkit-autofill:focus {
 }
 
 .mainmenu-area.affix {
+    /*background: linear-gradient(to bottom, #063b64 0%, #08518a 100%);*/
     background-color: #08508b;
-    /*background-color: #08508b;*/
 }
 
 /**
@@ -492,7 +496,6 @@ input:-webkit-autofill:focus {
 }
 
 .caption-slider .caption-photo {
-    display: inline-block;
     /*-webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);*/
     /*box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1)*/
 }
@@ -538,8 +541,8 @@ input:-webkit-autofill:focus {
     color: #515656;
     text-align: center;
     position: relative;
-    -webkit-box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);
+    /*-webkit-box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);*/
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-transition: 0.3s;
