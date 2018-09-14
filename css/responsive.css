@@ -2,7 +2,6 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {}
 
-
 /* Tablet Layout: 768px. */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -91,8 +90,38 @@
     .mainmenu-area .logo {
         margin-left: 15px;
     }
-}
 
+    /*  Custom Mobile*/
+    #di-logo {
+      height: 40px !important;
+    }
+
+    .social-menu {
+        text-align: center;
+        margin-top: -10%;
+    }
+
+    .social-menu li {
+        margin-top: 2.5%;
+    }
+
+    #service-page {
+        padding: 50px 0;
+    }
+
+    #ver-video-pc, .carousel-indicators li p, .xd, #how-it-works br {
+      display: none;
+    }
+
+    #ver-video-mob {
+      display: -webkit-inline-box;
+    }
+
+    .header-text {
+      text-align: center;
+      margin: auto;
+    }
+}
 
 /* Wide Mobile Layout: 480px. */
 

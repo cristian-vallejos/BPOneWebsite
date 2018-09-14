@@ -42,6 +42,14 @@ p {
     text-shadow: 0 1px 0 #000;
 }
 
+address {
+  margin-left: 15%;
+}
+
+#ver-video-mob {
+  display: none;
+}
+
 /*-----------------
 1. Google font
 ------------------*/
@@ -812,7 +820,7 @@ input:-webkit-autofill:focus {
 }
 
 .footer-top {
-    margin-bottom: 150px;
+    margin-bottom: 95px;
 }
 
 .side-icon-box {
