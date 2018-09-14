@@ -46,8 +46,8 @@ address {
   margin-left: 15%;
 }
 
-#ver-video-mob {
-  display: none;
+.ver_video_mob {
+  display: none !important;
 }
 
 /*-----------------

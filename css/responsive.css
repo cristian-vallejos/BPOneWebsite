@@ -105,21 +105,39 @@
         margin-top: 2.5%;
     }
 
+    .anlge-bg {
+        background: url('../images/angle-bg-bpone.png') no-repeat scroll center bottom -15px / 100% auto !important;
+    }
+
     #service-page {
-        padding: 50px 0;
+      margin-top: -6%;
     }
 
-    #ver-video-pc, .carousel-indicators li p, .xd, #how-it-works br {
-      display: none;
+    .ver_video_pc, .carousel-indicators li p {
+      display: none !important;
     }
 
-    #ver-video-mob {
-      display: -webkit-inline-box;
+    .ver_video_mob {
+      display: -webkit-inline-box !important;
     }
 
     .header-text {
       text-align: center;
       margin: auto;
+    }
+
+    #caption_slide .caption-photo {
+      margin-top: -110%;
+    }
+
+    .xd {
+      margin-left: 45% !important;
+      margin-top: -10% !important;
+    }
+
+    .carousel-inner > .item {
+      min-height: 57.5vh;
+      max-height: 75vh;
     }
 }
 
