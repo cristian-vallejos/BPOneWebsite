@@ -86,7 +86,7 @@
                 <div class="col-xs-12 col-md-7 header-text">
                     <h2>Desarrollado por CLT Soft</h2>
                     <p>Es el sistema médico personalizado de prevención activa contra lesiones por presión en pacientes hospitalizados, cuyo objetivo es empoderar al paciente y apoyar al personal de enfermería a otorgar cuidados de calidad.</p>
-                    <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/watch?v=1U-D26nFdcQ">Ver video</a>
+                    <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/1U-D26nFdcQ">Ver video</a>
                     <a href="https://www.youtube.com/watch?v=1U-D26nFdcQ" target="_blank" class="button white ver_video_mob">Ver video</a>
                 </div>
                 <div class="hidden-xs hidden-sm col-md-5 text-right" style="margin-top: 2.5%;">
@@ -173,7 +173,7 @@
                                               <br>¿Sabías, además, que los más propensos a sufrirlas son las personas de la tercera edad?, ¿y que, según la OCDE, al año 2050 el 43% de la población chilena formará parte de dicho grupo?</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
-                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/watch?v=1U-D26nFdcQ">Ver video</a>
+                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/1U-D26nFdcQ">Ver video</a>
                                             <a href="https://www.youtube.com/watch?v=1U-D26nFdcQ" target="_blank" class="button white ver_video_mob">Ver video</a>
                                         </div>
                                     </div>
@@ -201,7 +201,7 @@
                                               La información se obtendrá a través de un conjunto modular de almohadillas dispuestas sobre la cama del paciente y podrá ser visualizada desde la aplicación móvil en smartphones o en una tablet dispuesta para el uso del personal.</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
-                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/watch?v=1U-D26nFdcQ">Ver video</a>
+                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/1U-D26nFdcQ">Ver video</a>
                                             <a href="https://www.youtube.com/watch?v=1U-D26nFdcQ" target="_blank" class="button white ver_video_mob">Ver video</a>
                                         </div>
                                     </div>
@@ -247,7 +247,7 @@
                                             <br>Por otro lado, no es invasivo. Lo que da comodidad al paciente que la utilice, siendo además una solución de bajo costo en comparación a los montos invertidos actualmente en tratamiento y prevención.</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
-                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/watch?v=1U-D26nFdcQ">Ver video</a>
+                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/1U-D26nFdcQ">Ver video</a>
                                             <a href="https://www.youtube.com/watch?v=1U-D26nFdcQ" target="_blank" class="button white ver_video_mob">Ver video</a>
                                         </div>
                                     </div>
@@ -273,7 +273,7 @@
                                             <p>El personal estará autorizado para visualizar y generar reportes en formatos de archivo imprimibles con toda la información de utilidad que haya sido recopilada por el software, de manera que el cuidado de pacientes sea realizado en forma adecuada y con un alto nivel de calidad.</p>
                                         </div>
                                         <div class="caption-button" data-animation="animated fadeInUp">
-                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/watch?v=1U-D26nFdcQ">Ver video</a>
+                                            <a href="#" class="button white ver_video_pc" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/1U-D26nFdcQ">Ver video</a>
                                             <a href="https://www.youtube.com/watch?v=1U-D26nFdcQ" target="_blank" class="button white ver_video_mob">Ver video</a>
                                         </div>
                                     </div>
@@ -510,7 +510,7 @@
             <div class="modal-content" style="background: #000;">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <div>
+                    <div class="video-body">
                         <br><iframe width="100%" height="350" src="" frameborder="0"></iframe>
                     </div>
                 </div>
@@ -585,8 +585,16 @@
               $(theModal + ' button.close').click(function () {
                   $(theModal + ' iframe').attr('src', videoSRC);
               });
+
+              $(theModal).on('hide.bs.modal', function () {
+                $('.video-body iframe')[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+              })
           });
       }
+
+      $("#videoModal").on('hidden.bs.modal', function (e) {
+          $("#videoModal iframe").attr("src", "");
+      });
     </script>
 </body>
 
