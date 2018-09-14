@@ -288,12 +288,12 @@ input:-webkit-autofill:focus {
 
 .box .box-icon {
     height: 160px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .box .box-icon img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    /*-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);*/
     -webkit-transition: 0.3s;
     transition: 0.3s;
 }
@@ -301,6 +301,9 @@ input:-webkit-autofill:focus {
 .box:hover .box-icon img {
     -webkit-filter: grayscale(0);
     filter: grayscale(0)
+
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 /**
