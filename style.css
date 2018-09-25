@@ -384,7 +384,7 @@ input:-webkit-autofill:focus {
 
 .mainmenu-area.affix {
     /*background: linear-gradient(to bottom, #063b64 0%, #08518a 100%);*/
-    background-color: #08508b;
+    background-color: /*#08508b*/ #317bbb;
 }
 
 /**
