@@ -50,6 +50,12 @@ address {
   display: none !important;
 }
 
+@media (min-width: 1024px) {
+    .video-out {
+        display: none;
+    }
+}
+
 /*-----------------
 1. Google font
 ------------------*/
@@ -424,7 +430,7 @@ input:-webkit-autofill:focus {
 }
 
 .screen-slider .item {
-    background: url('images/nexus5.png') no-repeat scroll center center / auto 100%;
+    background: url('images/smartphone.png') no-repeat scroll center center / auto 100%;
     padding: 56px 22px;
     display: inline-block;
     margin: auto;
